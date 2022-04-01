@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 class Node {
-   // implement your own data structure here
     private int data;
     private Node next;
     public Node(int data){
@@ -20,7 +19,6 @@ class Node {
 }
 
 public class javaLinkedlist {
-// implement your own data structure here
     private Node head;
     private Node tail;
     private int size;
@@ -130,55 +128,13 @@ public class javaLinkedlist {
         list.addFirst(4);
         list.addFirst(5);
 
-        //read a interger which is the number of operations
-        Scanner total = new Scanner(System.in);
-        int n = total.nextInt();
-        //read the operations
-        Scanner input = new Scanner(System.in);
-        for(int i = 0; i < n; i++){
-            int op = input.nextInt();
-            switch(op){
-                case 0:
-                    System.out.println(list.size());
-                    break;
-                case 1:
-                    System.out.println(list.isEmpty());
-                    break;
-                case 2:
-                    int data = input.nextInt();
-                    list.addFirst(data);
-                    break;
-                case 3:
-                    data = input.nextInt();
-                    list.addLast(data);
-                    break;
-                case 4:
-                    System.out.println(list.getFirst());
-                    break;
-                case 5:
-                    System.out.println(list.getLast());
-                    break;
-                case 6:
-                    System.out.println(list.removeFirst());
-                    break;
-                case 7:
-                    System.out.println(list.removeLast());
-                    break;
-                case 8:
-                    list.print();
-                    break;
-                case 9:
-                    list.reverse();
-                    break;
-                case 10:
-                    list.clear();
-                    break;
-            }
-        }
-
-
-
-
+        list.print();
+        System.out.println(list.size());
+        System.out.println(list.getFirst());
+        System.out.println(list.getLast());
+        list.reverse();
+        System.out.println("After reverse");
+        list.print();
     }
 }
 
