@@ -32,6 +32,7 @@ public class Skiplist {
         for (int i = this.maxLevel; i >= 0; i--) {
             while (cur.next[i] != null && cur.next[i].val < num) {
                 cur = cur.next[i];
+
             }
             update[i] = cur;
         }
